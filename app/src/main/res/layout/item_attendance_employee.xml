@@ -1,0 +1,101 @@
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    android:padding="16dp"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="6dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <!-- Employee Name -->
+        <TextView
+            android:id="@+id/empName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Employee Name"
+            android:fontFamily="@font/poppins"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:paddingBottom="4dp" />
+
+        <!-- Status -->
+        <TextView
+            android:id="@+id/empStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Status: Present"
+            android:fontFamily="@font/poppins"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#2E7D32"
+            android:paddingBottom="8dp" />
+
+        <!-- Check In / Out Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:id="@+id/empCheckIn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="In: 09:00"
+                android:fontFamily="@font/poppins"
+                android:textSize="14sp"
+                android:textColor="#333333" />
+
+            <TextView
+                android:id="@+id/empCheckOut"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppins"
+                android:gravity="end"
+                android:text="Out: 18:10"
+                android:textSize="14sp"
+                android:textColor="#333333" />
+        </LinearLayout>
+
+        <!-- Overtime -->
+        <TextView
+            android:id="@+id/empOvertime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Overtime: 1 hour"
+            android:textSize="14sp"
+            android:fontFamily="@font/poppins"
+            android:textColor="#555555"
+            android:paddingTop="6dp" />
+
+        <!-- Divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="#DDDDDD" />
+
+        <!-- Leaves Summary -->
+        <TextView
+            android:id="@+id/empLeaves"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:text="Leaves  •  Full: 0  Half: 1  Paid: 1"
+            android:textSize="13sp"
+            android:textColor="#444444" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

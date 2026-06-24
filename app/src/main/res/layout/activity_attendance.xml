@@ -1,0 +1,227 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/admin_page_gradient"
+    android:padding="16dp">
+
+    <!-- ================= HEADER ================= -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="20dp">
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:src="@drawable/ic_back_black"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:padding="8dp" />
+
+        <TextView
+            android:id="@+id/attendanceTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Attendance Overview"
+            android:textSize="22sp"
+            android:fontFamily="@font/poppins"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:paddingStart="8dp" />
+
+        <ImageView
+            android:id="@+id/editAttendanceData"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:src="@drawable/setting2"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:padding="8dp" />
+
+        <ImageView
+            android:id="@+id/btnGeofencing"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:src="@android:drawable/ic_menu_mylocation"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:padding="8dp"
+            android:contentDescription="Geofencing Settings"/>
+
+    </LinearLayout>
+
+    <!-- ================= RULES CARD ================= -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="6dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <TextView
+                android:id="@+id/punchInTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins"
+                android:text="Punch In: --"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/punchOutTime"
+                android:layout_width="match_parent"
+                android:fontFamily="@font/poppins"
+                android:layout_height="wrap_content"
+                android:text="Punch Out: --"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/lateAllowed"
+                android:fontFamily="@font/poppins"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Late after: --"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/absentRule"
+                android:layout_width="match_parent"
+                android:fontFamily="@font/poppins"
+                android:layout_height="wrap_content"
+                android:text="Absent if no check-in by: --"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- ================= SEARCH ================= -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        app:cardCornerRadius="22dp"
+        app:cardElevation="4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="12dp">
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:src="@drawable/search" />
+
+            <EditText
+                android:id="@+id/searchEmployee"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginStart="7dp"
+                android:fontFamily="@font/poppins"
+                android:hint="Search Dates"
+                android:background="@android:color/transparent"
+                android:includeFontPadding="false"
+                android:paddingVertical="0dp"
+                android:gravity="center_vertical" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- ================= SUMMARY ================= -->
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:weightSum="3"-->
+<!--        android:layout_marginTop="18dp">-->
+
+<!--        &lt;!&ndash; P &ndash;&gt;-->
+<!--        <androidx.cardview.widget.CardView-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="110dp"-->
+<!--            android:layout_weight="1"-->
+<!--            android:layout_marginEnd="8dp"-->
+<!--            app:cardCornerRadius="20dp">-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/summaryPresent"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:gravity="center"-->
+<!--                android:text="P: 0"-->
+<!--                android:fontFamily="@font/poppins"-->
+<!--                android:textSize="20sp"-->
+<!--                android:textStyle="bold"-->
+<!--                android:textColor="#00A82D" />-->
+<!--        </androidx.cardview.widget.CardView>-->
+
+<!--        &lt;!&ndash; A &ndash;&gt;-->
+<!--        <androidx.cardview.widget.CardView-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="110dp"-->
+<!--            android:layout_weight="1"-->
+<!--            android:layout_marginEnd="8dp"-->
+<!--            app:cardCornerRadius="20dp">-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/summaryAbsent"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:gravity="center"-->
+<!--                android:fontFamily="@font/poppins"-->
+<!--                android:text="A: 0"-->
+<!--                android:textSize="20sp"-->
+<!--                android:textStyle="bold"-->
+<!--                android:textColor="#D50000" />-->
+<!--        </androidx.cardview.widget.CardView>-->
+
+<!--        &lt;!&ndash; L &ndash;&gt;-->
+<!--        <androidx.cardview.widget.CardView-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="110dp"-->
+<!--            android:layout_weight="1"-->
+<!--            app:cardCornerRadius="20dp">-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/summaryLate"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:gravity="center"-->
+<!--                android:text="L: 0"-->
+<!--                android:fontFamily="@font/poppins"-->
+<!--                android:textSize="20sp"-->
+<!--                android:textStyle="bold"-->
+<!--                android:textColor="#FFA500" />-->
+<!--        </androidx.cardview.widget.CardView>-->
+<!--    </LinearLayout>-->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Attendance Details"
+        android:textSize="22sp"
+        android:fontFamily="@font/poppins"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/black"
+        android:paddingStart="8dp" />
+
+    <!-- ================= SCROLL AREA STARTS HERE ================= -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerDates"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:nestedScrollingEnabled="false"/>
+
+</LinearLayout>

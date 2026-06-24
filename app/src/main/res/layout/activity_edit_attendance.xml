@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/admin_page_gradient"
+    tools:context=".edit_Attendance">
+
+    <!-- ================= HEADER ================= -->
+    <LinearLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="12dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:src="@drawable/ic_back_black"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:padding="8dp" />
+
+        <TextView
+            android:id="@+id/attendanceTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Attendance Rules"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/poppins"
+            android:textColor="@color/black"
+            android:paddingStart="8dp" />
+    </LinearLayout>
+
+    <!-- ================= CARD ================= -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardEditAttendance"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="6dp"
+        app:layout_constraintTop_toBottomOf="@id/headerLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Company Attendance Rules"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/poppins"
+                android:layout_marginBottom="12dp"/>
+
+            <!-- Punch In -->
+            <EditText
+                android:id="@+id/etPunchIn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Punch In Time (HH:MM)"
+                android:inputType="time"
+                android:fontFamily="@font/poppins"
+                android:enabled="false"
+                android:padding="12dp"/>
+
+            <!-- Punch Out -->
+            <EditText
+                android:id="@+id/etPunchOut"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Punch Out Time (HH:MM)"
+                android:inputType="time"
+                android:fontFamily="@font/poppins"
+                android:enabled="false"
+                android:padding="12dp"
+                android:layout_marginTop="8dp"/>
+
+            <!-- Late Rule -->
+            <EditText
+                android:id="@+id/etLateAfter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Late After Time (HH:MM)"
+                android:inputType="time"
+                android:fontFamily="@font/poppins"
+                android:enabled="false"
+                android:padding="12dp"
+                android:layout_marginTop="8dp"/>
+
+            <!-- Absent Rule -->
+            <EditText
+                android:id="@+id/etAbsentAfter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Absent If No Check-in By (HH:MM)"
+                android:inputType="time"
+                android:fontFamily="@font/poppins"
+                android:enabled="false"
+                android:padding="12dp"
+                android:layout_marginTop="8dp"/>
+
+            <!-- Edit Button -->
+            <Button
+                android:id="@+id/btnEditRules"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Edit Rules"
+                android:backgroundTint="@color/darkgreen"
+                android:textColor="@android:color/white"
+                android:fontFamily="@font/poppins"
+                android:layout_marginTop="16dp"/>
+
+            <!-- Save Button -->
+            <Button
+                android:id="@+id/btnSaveRules"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Save Changes"
+                android:backgroundTint="@color/darkgreen"
+                android:textColor="@android:color/white"
+                android:fontFamily="@font/poppins"
+                android:layout_marginTop="8dp"
+                android:visibility="gone"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

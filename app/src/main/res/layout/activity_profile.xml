@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/admin_page_gradient"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="18dp">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="20dp">
+
+            <ImageButton
+                android:id="@+id/btnBack"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:src="@drawable/ic_back_black"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:padding="8dp"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Admin Profile"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#111827"
+                android:gravity="center"
+                android:fontFamily="@font/poppins"/>
+
+            <ImageButton
+                android:id="@+id/btnLogout"
+                android:layout_width="30dp"
+                android:layout_height="25dp"
+                android:background="@drawable/logout"
+                android:padding="8dp"/>
+        </LinearLayout>
+
+        <!-- Avatar -->
+        <TextView
+            android:id="@+id/tvDetailInitial"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="28dp"
+            android:gravity="center"
+            android:text="A"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:fontFamily="@font/poppins"
+            android:background="@drawable/circle_avatar_bg"
+            android:elevation="10dp"/>
+
+        <!-- Admin Personal Info -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="18dp"
+            app:cardElevation="8dp"
+            android:layout_marginTop="26dp"
+            android:layout_margin="6dp"
+            android:background="@android:color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="22dp">
+
+                <TextView
+                    android:id="@+id/tvAdminName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Admin Name"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#1F2937"
+                    android:fontFamily="@font/poppins"/>
+
+                <TextView
+                    android:id="@+id/tvDetailEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="email@company.com"
+                    android:textSize="15sp"
+                    android:textColor="#6B7280"
+                    android:layout_marginTop="6dp"
+                    android:fontFamily="@font/poppins"/>
+
+                <TextView
+                    android:id="@+id/tvDetailPhone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+91 9876543210"
+                    android:textSize="15sp"
+                    android:textColor="#6B7280"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="@font/poppins"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#E5E7EB"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="0dp"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <!-- Company Info Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="18dp"
+            app:cardElevation="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_margin="6dp"
+            android:background="@android:color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="22dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Company Details"
+                    android:textStyle="bold"
+                    android:textSize="17sp"
+                    android:textColor="#1F2937"
+                    android:fontFamily="@font/poppins"/>
+
+                <TextView
+                    android:id="@+id/tvCompanyName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tech Corp Pvt Ltd"
+                    android:textSize="16sp"
+                    android:textColor="#374151"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/poppins"/>
+
+                <TextView
+                    android:id="@+id/tvCompanyCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Company Code: TECHO01"
+                    android:textSize="14sp"
+                    android:textColor="#6B7280"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/poppins"/>
+
+                <TextView
+                    android:id="@+id/tvCompanyEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="companyemail@example.com"
+                    android:textSize="14sp"
+                    android:textColor="#6B7280"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/poppins"/>
+
+                <TextView
+                    android:id="@+id/tvCompanyNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Company Number: 9800234567"
+                    android:textSize="14sp"
+                    android:textColor="#6B7280"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/poppins"/>
+
+                <TextView
+                    android:id="@+id/tvIndustry"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Industry: Software"
+                    android:textSize="14sp"
+                    android:textColor="#6B7280"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/poppins"/>
+
+                <TextView
+                    android:id="@+id/tvLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Location: India"
+                    android:textSize="14sp"
+                    android:textColor="#6B7280"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/poppins"/>
+
+                <TextView
+                    android:id="@+id/tvEmployeeCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Employees: 2"
+                    android:textSize="14sp"
+                    android:textColor="#6B7280"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/poppins"/>
+
+                <TextView
+                    android:id="@+id/tvDepartments"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Departments: Culinary, Engineering"
+                    android:textSize="14sp"
+                    android:textColor="#6B7280"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/poppins"/>
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+</ScrollView>

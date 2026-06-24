@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Stafflink</string>
+    <string name="title_activity_dashboard_page">dashboard_page</string>
+</resources>

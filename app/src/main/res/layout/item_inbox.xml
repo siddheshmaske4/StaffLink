@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="14dp"
+    app:cardElevation="8dp"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:padding="14dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Title — bold if unread, normal if read -->
+        <TextView
+            android:id="@+id/txtTitle"
+            android:text="Subject"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:textColor="#111"
+            android:fontFamily="@font/poppins"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <!-- Body preview -->
+        <TextView
+            android:id="@+id/txtBody"
+            android:text="Message preview..."
+            android:textSize="14sp"
+            android:textColor="#555"
+            android:fontFamily="@font/poppins"
+            android:layout_marginTop="6dp"
+            android:lineSpacingExtra="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <!-- Body preview -->
+        <TextView
+            android:id="@+id/txtPreview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:fontFamily="@font/poppins"
+            android:textColor="#777"
+            android:layout_marginTop="2dp"/>
+
+        <!-- Divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#EEEEEE"
+            android:layout_marginTop="10dp"/>
+
+        <!-- Timestamp -->
+        <TextView
+            android:id="@+id/txtTime"
+            android:text="Today • 10:42 AM"
+            android:textSize="12sp"
+            android:textColor="#888"
+            android:fontFamily="@font/poppins"
+            android:gravity="end"
+            android:layout_marginTop="6dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

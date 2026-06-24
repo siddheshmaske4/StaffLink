@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="6dp"
+    android:layout_margin="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Top Row: Avatar, Name, Role, Salary, Expand Button -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tvAvatar"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="A"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:fontFamily="@font/poppins"
+                android:background="@drawable/circle_avatar_bg"
+                android:layout_marginEnd="12dp"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvEmployeeName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Employee Name"
+                    android:fontFamily="@font/poppins"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/tvEmployeeRole"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Position • Department"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/poppins"
+                    android:textColor="#6B7280"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvEmployeeSalary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="₹0"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/poppins"
+                android:layout_marginEnd="8dp"/>
+
+            <ImageButton
+                android:id="@+id/btnExpand"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/down"/>
+        </LinearLayout>
+
+        <!-- Expandable Section -->
+        <LinearLayout
+            android:id="@+id/expandableLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_rounded_shadow"
+            android:elevation="8dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tvEmployeeEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins"
+                android:textColor="@color/black"
+                android:text="Email: -"/>
+
+            <TextView
+                android:id="@+id/tvEmployeePhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins"
+                android:textColor="@color/black"
+                android:text="Phone: -"/>
+
+            <TextView
+                android:id="@+id/tvEmployeePosition"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins"
+                android:textColor="@color/black"
+                android:text="Position: -"/>
+
+            <TextView
+                android:id="@+id/tvEmployeeDepartment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:fontFamily="@font/poppins"
+                android:text="Department: -"/>
+
+            <TextView
+                android:id="@+id/tvEmployeeBaseSalary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:fontFamily="@font/poppins"
+                android:text="Base Salary: ₹0"/>
+
+            <TextView
+                android:id="@+id/tvEmployeeFinalSalary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:fontFamily="@font/poppins"
+                android:text="Final Salary: ₹0"/>
+
+            <TextView
+                android:id="@+id/tvEmployeeDeductions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins"
+                android:textColor="@color/black"
+                android:text="Deductions: ₹0"/>
+
+            <TextView
+                android:id="@+id/tvEmployeeOvertime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:fontFamily="@font/poppins"
+                android:text="Overtime: ₹0"/>
+
+            <TextView
+                android:id="@+id/tvEmployeeHalfDays"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:fontFamily="@font/poppins"
+                android:text="Half Days: 0"/>
+
+            <TextView
+                android:id="@+id/tvEmployeeFullDays"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins"
+                android:textColor="@color/black"
+                android:text="Full Days: 0"/>
+
+            <TextView
+                android:id="@+id/tvEmployeePaidLeaves"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:fontFamily="@font/poppins"
+                android:text="Paid Leaves: 0"/>
+
+            <!-- ── NEW: Set Salary row ──────────────────────────────────────── -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#EEEEEE"
+                android:layout_marginVertical="10dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <EditText
+                    android:id="@+id/etBaseSalary"
+                    android:layout_width="0dp"
+                    android:layout_height="44dp"
+                    android:layout_weight="1"
+                    android:hint="Set base salary"
+                    android:inputType="numberDecimal"
+                    android:fontFamily="@font/poppins"
+                    android:textSize="14sp"
+                    android:background="@drawable/bg_input"
+                    android:padding="8dp"/>
+
+                <Button
+                    android:id="@+id/btnSetSalary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="44dp"
+                    android:layout_marginStart="8dp"
+                    android:text="Save"
+                    android:textSize="13sp"
+                    android:fontFamily="@font/poppins"
+                    android:backgroundTint="#1E90FF"
+                    android:textColor="@android:color/white"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

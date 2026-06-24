@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "469024211900",
+    "project_id": "stafflink-6a34b",
+    "storage_bucket": "stafflink-6a34b.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:469024211900:android:ec70095216706348b7e1b9",
+        "android_client_info": {
+          "package_name": "com.example.stafflink"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAN4MyHgp9N_iHwcxGi2YCol-bYzrFpPR4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

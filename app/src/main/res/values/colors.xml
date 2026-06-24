@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<color name="black">#FF000000</color>
+<color name="white">#FFFFFFFF</color>
+<!-- Add these to your colors.xml -->
+<color name="card_stroke">#E0E0E0</color>
+<color name="text_primary">#212121</color>
+<color name="text_secondary">#757575</color>
+<color name="green">#5DBB63</color>
+    <color name="darkgreen">#006A66</color>
+    <color name="red">#F44336</color>
+<color name="white_50">#FAFAFA</color>
+<color name="primary">#2962FF</color>
+<color name="divider">#1FFFFFFF</color>
+<color name="background">#FAFAFA</color>
+<color name="grey">#FAFAFA</color>
+<color name="purple_500">#9C27B0</color>
+
+<!-- Material Design Grey Palette -->
+    <color name="teal_200">#008080</color>
+<color name="grey_50">#FAFAFA</color>   <!-- Lightest grey (backgrounds) -->
+<color name="grey_100">#F5F5F5</color>
+<color name="grey_200">#EEEEEE</color>  <!-- Dividers, subtle borders -->
+<color name="grey_300">#E0E0E0</color>
+<color name="grey_400">#BDBDBD</color>  <!-- Disabled text/icons -->
+<color name="grey_500">#9E9E9E</color>  <!-- Secondary text -->
+<color name="grey_600">#757575</color>  <!-- Primary grey text -->
+<color name="grey_700">#616161</color>
+<color name="grey_800">#424242</color>  <!-- Dark backgrounds -->
+<color name="grey_900">#212121</color>  <!-- Darkest grey -->
+
+</resources>

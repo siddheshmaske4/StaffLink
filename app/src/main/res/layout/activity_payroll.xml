@@ -1,0 +1,527 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/admin_page_gradient"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- TOP BAR -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="18dp">
+
+            <ImageButton
+                android:id="@+id/btnBack"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_back_black"
+                android:contentDescription="Back"
+                android:padding="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Payroll Settings"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#2C3A47"
+                android:fontFamily="@font/poppins"
+                android:layout_marginStart="12dp"/>
+        </LinearLayout>
+
+        <!-- TITLE -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Payroll and Company Policy Settings"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#2C3A47"
+            android:fontFamily="@font/poppins"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- Currency Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="6dp"
+            android:background="@android:color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Currency"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/poppins"/>
+
+                <EditText
+                    android:id="@+id/etCurrency"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:hint="Ex: INR / USD"
+                    android:text="INR"
+                    android:padding="12dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/poppins"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Salary Deduction Rules Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="6dp"
+            android:background="@android:color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Salary Deduction Rules"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/poppins"/>
+
+                <!-- Full Leave -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="12dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Full Leave Deduction Amount :"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/poppins"/>
+
+                    <EditText
+                        android:id="@+id/etFullLeaveDeduct"
+                        android:layout_width="80dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/bg_grey_300"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:text="1600"
+                        android:padding="8dp"
+                        android:fontFamily="@font/poppins"/>
+                </LinearLayout>
+
+                <!-- Half Leave -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="12dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Half Day Deduction Amount :"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/poppins"/>
+
+                    <EditText
+                        android:id="@+id/etHalfLeaveDeduct"
+                        android:layout_width="80dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/bg_grey_300"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:text="800"
+                        android:padding="8dp"
+                        android:fontFamily="@font/poppins"/>
+                </LinearLayout>
+
+                <!-- Per Day Salary -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="12dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Per Day Salary Amount :"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/poppins"/>
+
+                    <EditText
+                        android:id="@+id/etPerDayDeduct"
+                        android:layout_width="80dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/bg_grey_300"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:text="2000"
+                        android:padding="8dp"
+                        android:fontFamily="@font/poppins"/>
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Leave Policy Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="6dp"
+            android:background="@android:color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Leave Policy"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/poppins"/>
+
+                <!-- Full Day Hours -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="12dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Full Day Working Hours :"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/poppins"/>
+
+                    <EditText
+                        android:id="@+id/etFullDayHours"
+                        android:layout_width="80dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/bg_grey_300"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:text="8"
+                        android:padding="8dp"
+                        android:fontFamily="@font/poppins"/>
+                </LinearLayout>
+
+                <!-- Half Day Hours -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="12dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Half Day Working Hours :"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/poppins"/>
+
+                    <EditText
+                        android:id="@+id/etHalfDayHours"
+                        android:layout_width="80dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/bg_grey_300"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:text="4"
+                        android:padding="8dp"
+                        android:fontFamily="@font/poppins"/>
+                </LinearLayout>
+
+                <!-- Paid Leaves -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="12dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Paid Leaves Allowed Per Month :"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/poppins"/>
+
+                    <EditText
+                        android:id="@+id/etPaidLeaves"
+                        android:layout_width="80dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/bg_grey_300"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:text="2"
+                        android:padding="8dp"
+                        android:fontFamily="@font/poppins"/>
+                </LinearLayout>
+
+                <!-- Weekly Off -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="12dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Weekly Off Day :"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/poppins"/>
+
+                    <EditText
+                        android:id="@+id/etWeeklyOff"
+                        android:layout_width="160dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/bg_grey_300"
+                        android:gravity="center"
+                        android:inputType="text"
+                        android:text="Sunday"
+                        android:padding="8dp"
+                        android:fontFamily="@font/poppins"/>
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Overtime Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="6dp"
+            android:background="@android:color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Overtime Rules"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/poppins"/>
+
+                <!-- Max Overtime -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="12dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Max Overtime Hours Per Month :"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/poppins"/>
+
+                    <EditText
+                        android:id="@+id/etMaxOvertime"
+                        android:layout_width="80dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/bg_grey_300"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:text="10"
+                        android:padding="8dp"
+                        android:fontFamily="@font/poppins"/>
+                </LinearLayout>
+
+                <!-- Overtime Rate -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="12dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Overtime Rate Per Hour :"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/poppins"/>
+
+                    <EditText
+                        android:id="@+id/etOTRate"
+                        android:layout_width="80dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/bg_grey_300"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:text="100"
+                        android:padding="8dp"
+                        android:fontFamily="@font/poppins"/>
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- ESIC & PF Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="6dp"
+            android:background="@android:color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ESIC and PF Charges (%)"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/poppins"/>
+
+                <!-- ESIC -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="12dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="ESIC (%) :"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/poppins"/>
+
+                    <EditText
+                        android:id="@+id/etESIC"
+                        android:layout_width="80dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/bg_grey_300"
+                        android:gravity="center"
+                        android:inputType="numberDecimal"
+                        android:text="1.5"
+                        android:padding="8dp"
+                        android:fontFamily="@font/poppins"/>
+                </LinearLayout>
+
+                <!-- PF -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="12dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="PF (%) :"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/poppins"/>
+
+                    <EditText
+                        android:id="@+id/etPF"
+                        android:layout_width="80dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/bg_grey_300"
+                        android:gravity="center"
+                        android:inputType="numberDecimal"
+                        android:text="2"
+                        android:padding="8dp"
+                        android:fontFamily="@font/poppins"/>
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Edit & Submit Buttons -->
+        <Button
+            android:id="@+id/btnEdit"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Edit Settings"
+            android:backgroundTint="#6c5ce7"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:fontFamily="@font/poppins"
+            android:layout_marginTop="16dp"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Save Settings"
+            android:backgroundTint="#0984E3"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:fontFamily="@font/poppins"
+            android:layout_marginTop="24dp"/>
+
+    </LinearLayout>
+</ScrollView>

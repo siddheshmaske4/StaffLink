@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@drawable/admin_page_gradient">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="18dp">
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="Leave Request"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#2C3A47"
+                android:layout_marginStart="12dp"
+                android:fontFamily="@font/poppins"/>
+        </LinearLayout>
+
+        <!-- Subject -->
+        <EditText
+            android:id="@+id/edtTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Reason / Subject"
+            android:fontFamily="@font/poppins"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_input"
+            android:padding="12dp"/>
+
+        <!-- Message -->
+        <EditText
+            android:id="@+id/edtBody"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Explain your leave request"
+            android:minLines="4"
+            android:fontFamily="@font/poppins"
+            android:gravity="top"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_input"
+            android:padding="12dp"/>
+
+        <!-- Leave Type -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Leave Type"
+            android:textStyle="bold"
+            android:textColor="#2C3A47"
+            android:fontFamily="@font/poppins"
+            android:layout_marginTop="16dp"/>
+
+        <RadioGroup
+            android:id="@+id/radioLeaveType"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radioFullDay"
+                android:text="Full Day"
+                android:fontFamily="@font/poppins"
+                android:layout_marginEnd="20dp"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radioHalfDay"
+                android:text="Half Day"
+                android:fontFamily="@font/poppins"/>
+        </RadioGroup>
+
+        <!-- Payroll Note -->
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Note: Half day will deduct 50% salary for that day."
+            android:textSize="12sp"
+            android:textColor="#555"
+            android:fontFamily="@font/poppins"
+            android:layout_marginTop="6dp"/>
+
+        <!-- Send Button -->
+        <Button
+            android:id="@+id/btnSubmitLeave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SUBMIT REQUEST"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:fontFamily="@font/poppins"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="#1E90FF"
+            android:textColor="@android:color/white"/>
+
+        <!-- ── Divider ─────────────────────────────────────────────────────── -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#DDDDDD"
+            android:layout_marginTop="28dp"
+            android:layout_marginBottom="4dp"/>
+
+        <!-- ── Leave history ───────────────────────────────────────────────── -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your Leave History"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#2C3A47"
+            android:fontFamily="@font/poppins"
+            android:layout_marginTop="12dp"/>
+
+        <TextView
+            android:id="@+id/txtNoLeaveHistory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No leave requests submitted yet"
+            android:textSize="14sp"
+            android:fontFamily="@font/poppins"
+            android:textColor="#888"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            android:visibility="gone"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvLeaveHistory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            android:nestedScrollingEnabled="false"/>
+
+    </LinearLayout>
+
+</ScrollView>

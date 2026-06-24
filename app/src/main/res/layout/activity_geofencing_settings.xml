@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/admin_page_gradient">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="18dp">
+
+            <ImageButton
+                android:id="@+id/btnBack"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_back_black"
+                android:padding="8dp"
+                android:contentDescription="Back"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Attendance Fencing"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#2C3A47"
+                android:layout_marginStart="12dp"
+                android:fontFamily="@font/poppins"/>
+
+        </LinearLayout>
+
+        <!-- ── GEOFENCING CARD ──────────────────────────────────────────────── -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="6dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="18dp">
+
+                <!-- Title + Switch -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="📍 Geofencing"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/poppins"
+                        android:textColor="#111"/>
+
+                    <Switch
+                        android:id="@+id/switchGeofencing"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Employee can only punch in when within the set distance from the office."
+                    android:textSize="13sp"
+                    android:fontFamily="@font/poppins"
+                    android:textColor="#777"
+                    android:layout_marginTop="4dp"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#EEEEEE"
+                    android:layout_marginVertical="14dp"/>
+
+                <!-- Use My Location button -->
+                <Button
+                    android:id="@+id/btnUseMyLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="📌 Use My Current Location"
+                    android:textSize="13sp"
+                    android:fontFamily="@font/poppins"
+                    android:backgroundTint="#1E90FF"
+                    android:textColor="@android:color/white"/>
+
+                <!-- Latitude -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Office Latitude"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/poppins"
+                    android:textColor="#2C3A47"
+                    android:layout_marginTop="12dp"/>
+
+                <EditText
+                    android:id="@+id/etLatitude"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="e.g. 18.5204"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:fontFamily="@font/poppins"
+                    android:background="@drawable/bg_input"
+                    android:padding="12dp"
+                    android:layout_marginTop="4dp"/>
+
+                <!-- Longitude -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Office Longitude"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/poppins"
+                    android:textColor="#2C3A47"
+                    android:layout_marginTop="12dp"/>
+
+                <EditText
+                    android:id="@+id/etLongitude"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="e.g. 73.8567"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:fontFamily="@font/poppins"
+                    android:background="@drawable/bg_input"
+                    android:padding="12dp"
+                    android:layout_marginTop="4dp"/>
+
+                <!-- Radius -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Allowed Radius (meters)"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/poppins"
+                    android:textColor="#2C3A47"
+                    android:layout_marginTop="12dp"/>
+
+                <EditText
+                    android:id="@+id/etRadius"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="e.g. 100"
+                    android:inputType="number"
+                    android:fontFamily="@font/poppins"
+                    android:background="@drawable/bg_input"
+                    android:padding="12dp"
+                    android:layout_marginTop="4dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="💡 Recommended: 100m for single office"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/poppins"
+                    android:textColor="#888"
+                    android:layout_marginTop="4dp"/>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- ── NETWORK FENCING CARD ──────────────────────────────────────────── -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="6dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="18dp">
+
+                <!-- Title + Switch -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="📶 Network Fencing"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/poppins"
+                        android:textColor="#111"/>
+
+                    <Switch
+                        android:id="@+id/switchNetworkFencing"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Employee can only punch in when connected to the office WiFi network."
+                    android:textSize="13sp"
+                    android:fontFamily="@font/poppins"
+                    android:textColor="#777"
+                    android:layout_marginTop="4dp"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#EEEEEE"
+                    android:layout_marginVertical="14dp"/>
+
+                <!-- WiFi SSID -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Office WiFi Name (SSID)"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/poppins"
+                    android:textColor="#2C3A47"/>
+
+                <EditText
+                    android:id="@+id/etSSID"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="e.g. Office_WiFi_2G"
+                    android:fontFamily="@font/poppins"
+                    android:background="@drawable/bg_input"
+                    android:padding="12dp"
+                    android:layout_marginTop="4dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="💡 Enter exact WiFi name — case sensitive"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/poppins"
+                    android:textColor="#888"
+                    android:layout_marginTop="4dp"/>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Save button -->
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SAVE RULES"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:fontFamily="@font/poppins"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="#1E90FF"
+            android:textColor="@android:color/white"/>
+
+    </LinearLayout>
+</ScrollView>

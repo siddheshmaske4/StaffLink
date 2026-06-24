@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/admin_page_gradient">
+
+    <!-- Header -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="My Tasks"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/poppins"
+        android:textColor="#2C3A47"
+        android:padding="16dp"
+        android:layout_marginTop="18dp"/>
+
+    <!-- Empty state -->
+    <TextView
+        android:id="@+id/txtEmpty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="No tasks assigned yet"
+        android:textSize="16sp"
+        android:fontFamily="@font/poppins"
+        android:textColor="#888"
+        android:gravity="center"
+        android:layout_marginTop="60dp"
+        android:visibility="gone"/>
+
+    <!-- Task list -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvTasks"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="8dp"
+        android:clipToPadding="false"/>
+
+</LinearLayout>

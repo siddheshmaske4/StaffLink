@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F7FA"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp">
+
+        <!-- Top Profile Row -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Circle Letter -->
+            <TextView
+                android:id="@+id/txtCircle"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:background="@drawable/circle_bg"
+                android:gravity="center"
+                android:text="A"
+                android:fontFamily="@font/poppins"
+                android:textColor="#FFFFFF"
+                android:textSize="28sp"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_marginStart="12dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:id="@+id/txtUsername"
+                    android:text="Username"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/poppins"
+                    android:textStyle="bold"
+                    android:textColor="#000"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/txtEmail"
+                    android:fontFamily="@font/poppins"
+                    android:text="example@gmail.com"
+                    android:textSize="14sp"
+                    android:textColor="#555"/>
+            </LinearLayout>
+
+            <ImageButton
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/btnLogout"
+                android:src="@android:drawable/ic_lock_power_off"
+                android:background="@android:color/transparent"
+                android:padding="8dp"/>
+
+            <ImageView
+                android:id="@+id/inboxIcon"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/plane"
+                android:contentDescription="Mail"
+                android:layout_marginStart="10dp"/>
+        </LinearLayout>
+
+        <!-- Notice Card -->
+        <LinearLayout
+            android:layout_marginTop="24dp"
+            android:background="#E3F2FD"
+            android:padding="16dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="📢 Important Notice"
+                android:textStyle="bold"
+                android:fontFamily="@font/poppins"
+                android:textSize="16sp"
+                android:textColor="#0D47A1"/>
+
+            <TextView
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:id="@+id/txtNotice"
+                android:text="Office timing strictly 10:00 AM. Salary credited on 30th."
+                android:layout_marginTop="6dp"
+                android:textSize="15sp"
+                android:fontFamily="@font/poppins"
+                android:textColor="#000"/>
+        </LinearLayout>
+
+        <!-- Punch Section -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Attendance"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="28dp"
+            android:textColor="#000"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/btnPunchIn"
+            android:text="Punch In"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/button_design"
+            app:backgroundTint="@color/darkgreen"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:fontFamily="@font/poppins"
+            android:padding="14dp"/>
+
+        <Button
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:id="@+id/btnPunchOut"
+            android:text="Punch Out"
+            app:backgroundTint="@color/darkgreen"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/button_design"
+            android:fontFamily="@font/poppins"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:padding="14dp"/>
+
+    </LinearLayout>
+</ScrollView>
