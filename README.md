@@ -70,6 +70,7 @@ I developed and worked on several major parts of the StaffLink application, incl
 - Task Creation and Assignment System
 - Task Tracking and Acknowledgement
 - Attendance Geo-Network Fencing
+- Leave Management Section — improved and redesigned
 - Profile Section Redesign
 - Firebase Realtime Database Integration
 
